@@ -110,11 +110,12 @@ function Pricing() {
           <div className="flex flex-col w-full max-w-md p-8 border-2 border-blue-500 rounded-3xl bg-gray-900 bg-opacity-70 backdrop-blur-sm relative overflow-hidden shadow-lg shadow-blue-500/20">
             <div className="absolute -right-20 -top-20 w-40 h-40 bg-blue-500 rounded-full filter blur-3xl opacity-20" />
             
-            <div className="absolute -left-2 top-6 bg-blue-500 text-white py-1 px-4 text-xs font-bold">
+            {/* Most Popular Tag - Repositioned Higher */}
+            <div className="absolute -left-2 top-3 bg-blue-500 text-white py-1 px-4 text-xs font-bold z-10">
               MOST POPULAR
             </div>
             
-            <div className="mb-6">
+            <div className="mb-6 mt-4"> {/* Added mt-4 to push content down */}
               <div className="flex items-center gap-2 mb-3">
                 <svg className="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
