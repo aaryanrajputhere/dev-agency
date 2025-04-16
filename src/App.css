@@ -1,0 +1,9 @@
+@font-face {
+    font-family: nunito ;
+    src: url("../src/assets/fonts/NunitoSans-VariableFont_YTLC\,opsz\,wdth\,wght.ttf");
+}
+@import "tailwindcss";
+
+@theme{
+    --font-nunoito: nunito , "sans-serif"; 
+}
