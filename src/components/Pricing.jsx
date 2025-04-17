@@ -1,6 +1,43 @@
 import React from "react";
-
+import { useState, useEffect } from "react";
 function Pricing() {
+  const words = ["pricing", "plans"];
+  const [currentWordIndex, setCurrentWordIndex] = useState(0);
+  const [currentText, setCurrentText] = useState("");
+  const [isTyping, setIsTyping] = useState(true);
+  
+  useEffect(() => {
+    const word = words[currentWordIndex];
+    
+    if (isTyping) {
+      if (currentText === word) {
+        // Finished typing the word, pause before deleting
+        setTimeout(() => setIsTyping(false), 1500);
+        return;
+      }
+      
+      // Typing effect
+      const timeout = setTimeout(() => {
+        setCurrentText(word.substring(0, currentText.length + 1));
+      }, 150);
+      
+      return () => clearTimeout(timeout);
+    } else {
+      if (currentText === "") {
+        // Move to the next word
+        setCurrentWordIndex((prev) => (prev + 1) % words.length);
+        setIsTyping(true);
+        return;
+      }
+      
+      // Deleting effect
+      const timeout = setTimeout(() => {
+        setCurrentText(currentText.substring(0, currentText.length - 1));
+      }, 100);
+      
+      return () => clearTimeout(timeout);
+    }
+  }, [currentText, isTyping, currentWordIndex, words]);
   return (
     <section className="relative w-full min-h-screen flex items-center justify-center overflow-hidden bg-gray-900 py-16 px-5">
       {/* Stars effect */}
@@ -28,11 +65,10 @@ function Pricing() {
         {/* Heading Section */}
         <div className="mt-4">
           <div className="flex gap-2.5 justify-center items-center mb-4 text-5xl tracking-tighter text-white leading-tight max-sm:text-4xl max-sm:leading-10">
-            <span>Flexible</span>
-            <span className="relative pr-1 text-pink-50 border-solid bg-blue-600 bg-opacity-20 border-r-2 border-r-sky-200">
-              pricing
+            <span>Our Flexible</span>
+            <span className="relative pr-1 text-pink-50 border-solid bg-opacity-50 border-r-2 border-r-sky-200 animate-pulse">
+              {currentText}
             </span>
-            <span>options</span>
           </div>
           <div className="text-lg leading-6 text-center text-stone-300 max-sm:text-base max-sm:leading-6">
             Choose the plan that works best for your business needs
