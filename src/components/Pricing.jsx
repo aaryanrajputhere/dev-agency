@@ -63,8 +63,12 @@ function Pricing() {
       
       <div className="z-10 flex flex-col items-center w-full max-w-6xl mx-auto">
         {/* Heading Section */}
-        <div className="mt-4">
+        <div className="mt-4 flex flex-col items-center">
+        <div className="px-4 py-3 mb-6 text-sm border border-solid border-blue-500 border-opacity-30 rounded-full text-blue-300 w-fit ">
+            Our Price 
+          </div>
           <div className="flex gap-2.5 justify-center items-center mb-4 text-5xl tracking-tighter text-white leading-tight max-sm:text-4xl max-sm:leading-10">
+           
             <span>Our Flexible</span>
             <span className="relative pr-1 text-pink-50 border-solid bg-opacity-50 border-r-2 border-r-sky-200 animate-pulse">
               {currentText}
@@ -238,8 +242,7 @@ function Pricing() {
         </div>
       </div>
       
-      {/* Bottom gradient */}
-      <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-black to-transparent" />
+      
     </section>
   );
 }
