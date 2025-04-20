@@ -40,17 +40,17 @@ export default function Hero() {
   }, [currentText, isTyping, currentWordIndex, words]);
 
   return (
-    <section className="relative w-full h-screen flex items-center justify-center overflow-hidden bg-black">
-      {/* Content container with two columns */}
-      <div className="container mx-auto px-4 z-10 flex flex-col md:flex-row items-center justify-between gap-8 max-w-6xl">
-        {/* Text content - left aligned */}
-        <div className="flex flex-col justify-center items-start text-left max-w-2xl">
-          <h1 className="text-4xl mt-8 mb-4 md:text-6xl font-serif tracking-wide text-gray-300">
+    <section className="relative w-full min-h-screen flex items-center justify-center overflow-hidden bg-black py-16 px-4 sm:px-6">
+      {/* Content container with responsive layout */}
+      <div className="container mx-auto z-10 flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12 max-w-6xl">
+        {/* Text content - responsive centering on mobile, left-aligned on desktop */}
+        <div className="flex flex-col justify-center items-center lg:items-start text-center lg:text-left max-w-3xl w-full">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif tracking-wide text-gray-300">
             We build{" "}
             <div className="inline-block align-bottom">
               <div className="relative">
-                {/* Fixed-width container for text */}
-                <div className="min-w-full md:min-w-48 h-12 md:h-16 relative">
+                {/* Responsive width container for typing text */}
+                <div className="min-w-full sm:min-w-32 md:min-w-40 lg:min-w-48 h-12 sm:h-14 md:h-16 relative">
                   <span className="text-white absolute left-0 font-semibold">
                     {currentText}
                     <span className="animate-pulse text-white opacity-80">|</span>
@@ -60,37 +60,37 @@ export default function Hero() {
             </div>
           </h1>
           
-          <h2 className="text-xl md:text-2xl font-light mt-3 text-gray-400 italic font-serif">
+          <h2 className="text-lg sm:text-xl md:text-2xl font-light mt-2 md:mt-3 text-gray-400 italic font-serif">
             that turn <span className="text-white font-medium">ideas</span> into <span className="text-gray-200 font-medium">income</span>
           </h2>
           
-          <div className="mt-8 mb-8 text-3xl md:text-5xl font-serif tracking-wide text-gray-400">
+          <div className="mt-4 mb-4 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif tracking-wide text-gray-400">
             <span className="opacity-80">One Team</span>{" "}
             <span className="text-white italic border-b-2 border-white pb-1">Real Results</span>
           </div>
           
-          <p className="mt-8 text-base md:text-lg text-gray-500 leading-relaxed tracking-wide">
+          <p className="mt-6 md:mt-8 text-sm sm:text-base md:text-lg text-gray-500 leading-relaxed tracking-wide max-w-lg mx-auto lg:mx-0">
             We build apps, websites, and systems for businesses and agencies —
             <span className="text-white font-medium"> fast</span>, <span className="text-gray-300 font-medium">reliable</span>, and <span className="text-gray-200 font-medium">hassle-free</span>.
           </p>
           
-          <div className="mt-12">
-            <button className="px-8 py-4 bg-white text-black rounded-full border border-gray-300 hover:bg-gray-100 transition-all duration-300 flex items-center shadow-lg shadow-white/10 transform hover:scale-105">
-              <span className="font-medium">Book a 15-min discovery call</span>
-              <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <div className="mt-8 md:mt-12">
+            <button className="px-6 sm:px-8 py-3 sm:py-4 bg-white text-black rounded-full border border-gray-300 hover:bg-gray-100 transition-all duration-300 flex items-center shadow-lg shadow-white/10 transform hover:scale-105">
+              <span className="font-medium text-sm sm:text-base">Book a 15-min discovery call</span>
+              <svg className="ml-2 w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
               </svg>
             </button>
           </div>
         </div>
         
-        {/* Founder image - right side */}
-        <div className="flex-shrink-0 w-full md:w-80 lg:w-96 mt-8 md:mt-0">
-          <div className="relative w-full aspect-square rounded-2xl overflow-hidden border-2 border-gray-800 shadow-xl shadow-white/5">
+        {/* Founder image - centered on mobile, right-aligned on desktop */}
+        <div className="flex-shrink-0 w-64 sm:w-72 md:w-80 lg:w-96 mt-12 lg:mt-0">
+          <div className="relative w-full aspect-square rounded-2xl overflow-hidden border-2 border-gray-800 shadow-xl shadow-white/5 mx-auto lg:mx-0">
             {/* Placeholder for founder image */}
             <div className="absolute inset-0 bg-gradient-to-br from-gray-800 to-gray-900 flex items-center justify-center">
               <div className="text-gray-500">
-                <svg className="w-20 h-20 opacity-50" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <svg className="w-16 h-16 sm:w-20 sm:h-20 opacity-50" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                   <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd"></path>
                 </svg>
               </div>
@@ -98,7 +98,7 @@ export default function Hero() {
             {/* When you have an actual image, replace the div above with: */}
             {/* <img src="/path/to/founder-image.jpg" alt="Founder Name" className="w-full h-full object-cover" /> */}
           </div>
-          <div className="mt-4 text-center md:text-left">
+          <div className="mt-4 text-center lg:text-left">
             <h3 className="text-white font-medium text-lg">Aaryan Rajput</h3>
             <p className="text-gray-400 text-sm">CEO & Founder</p>
           </div>
@@ -106,8 +106,8 @@ export default function Hero() {
       </div>
       
       {/* Refined stars effect - subtle white dots */}
-      <div className="absolute inset-0 z-0">
-        {[...Array(200)].map((_, i) => (
+      <div className="absolute inset-0 z-0 opacity-60 sm:opacity-100">
+        {[...Array(100)].map((_, i) => (
           <div 
             key={i}
             className="absolute bg-white rounded-full"
@@ -122,14 +122,14 @@ export default function Hero() {
         ))}
       </div>
       
-      {/* Subtle white glow accents */}
-      <div className="absolute top-1/4 -left-32 w-64 h-64 bg-white rounded-full filter blur-3xl opacity-5" />
-      <div className="absolute bottom-1/4 -right-32 w-64 h-64 bg-white rounded-full filter blur-3xl opacity-5" />
-      <div className="absolute top-2/3 left-1/3 w-48 h-48 bg-white rounded-full filter blur-3xl opacity-3" />
+      {/* Responsive white glow accents - smaller on mobile */}
+      <div className="absolute top-1/4 -left-16 sm:-left-32 w-32 sm:w-64 h-32 sm:h-64 bg-white rounded-full filter blur-3xl opacity-3 sm:opacity-5" />
+      <div className="absolute bottom-1/4 -right-16 sm:-right-32 w-32 sm:w-64 h-32 sm:h-64 bg-white rounded-full filter blur-3xl opacity-3 sm:opacity-5" />
+      <div className="absolute top-2/3 left-1/3 w-24 sm:w-48 h-24 sm:h-48 bg-white rounded-full filter blur-3xl opacity-2 sm:opacity-3" />
       
       {/* Subtle grain texture overlay for visual interest */}
       <div 
-        className="absolute inset-0 z-0 opacity-20 pointer-events-none"
+        className="absolute inset-0 z-0 opacity-10 sm:opacity-20 pointer-events-none"
         style={{
           backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")`,
           backgroundRepeat: 'repeat',
