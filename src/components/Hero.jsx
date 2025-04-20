@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 
 export default function Hero() {
   
-  const words = ["Websites", "Apps", "MVPs"];
+  const words = ["Websites", "Apps", "MVPs" , "Automations"];
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
   const [currentText, setCurrentText] = useState("");
   const [isTyping, setIsTyping] = useState(true);
