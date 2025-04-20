@@ -42,41 +42,38 @@ export default function Hero() {
   return (
     <section className="relative w-full min-h-screen flex items-center justify-center overflow-hidden bg-black py-16 px-4 sm:px-6">
       {/* Content container with responsive layout */}
-      <div className="container mx-auto z-10 flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12 max-w-6xl">
-        {/* Text content - responsive centering on mobile, left-aligned on desktop */}
-        <div className="flex flex-col justify-center items-center lg:items-start text-center lg:text-left max-w-3xl w-full">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif tracking-wide text-gray-300">
-            We build{" "}
-            <div className="inline-block align-bottom">
-              <div className="relative">
-                {/* Responsive width container for typing text */}
-                <div className="min-w-full sm:min-w-32 md:min-w-40 lg:min-w-48 h-12 sm:h-14 md:h-16 relative">
-                  <span className="text-white absolute left-0 font-semibold">
-                    {currentText}
-                    <span className="animate-pulse text-white opacity-80">|</span>
-                  </span>
-                </div>
-              </div>
+      <div className="container mx-auto z-10 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8 lg:gap-12 max-w-6xl">
+        {/* Text content - consistently left-aligned on all screen sizes */}
+        <div className="flex flex-col justify-center items-start text-left max-w-3xl w-full">
+          <h1 className="text-4xl sm:text-5xl md:text-5xl lg:text-6xl font-serif tracking-wide text-gray-300">
+            <div className="flex flex-wrap items-baseline">
+              <span>We build</span>
+              <span className="relative ml-3 inline-block">
+                <span className="text-white font-semibold">
+                  {currentText}
+                  <span className="animate-pulse text-white opacity-80">|</span>
+                </span>
+              </span>
             </div>
           </h1>
           
-          <h2 className="text-lg sm:text-xl md:text-2xl font-light mt-2 md:mt-3 text-gray-400 italic font-serif">
+          <h2 className="text-xl sm:text-xl md:text-2xl font-light mt-4 text-gray-400 italic font-serif">
             that turn <span className="text-white font-medium">ideas</span> into <span className="text-gray-200 font-medium">income</span>
           </h2>
           
-          <div className="mt-4 mb-4 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif tracking-wide text-gray-400">
+          <div className="mt-6 text-3xl sm:text-3xl md:text-4xl lg:text-5xl font-serif tracking-wide text-gray-400">
             <span className="opacity-80">One Team</span>{" "}
             <span className="text-white italic border-b-2 border-white pb-1">Real Results</span>
           </div>
           
-          <p className="mt-6 md:mt-8 text-sm sm:text-base md:text-lg text-gray-500 leading-relaxed tracking-wide max-w-lg mx-auto lg:mx-0">
+          <p className="mt-8 text-base sm:text-lg md:text-lg text-gray-500 leading-relaxed tracking-wide max-w-lg">
             We build apps, websites, and systems for businesses and agencies —
             <span className="text-white font-medium"> fast</span>, <span className="text-gray-300 font-medium">reliable</span>, and <span className="text-gray-200 font-medium">hassle-free</span>.
           </p>
           
-          <div className="mt-8 md:mt-12">
+          <div className="mt-10">
             <button className="px-6 sm:px-8 py-3 sm:py-4 bg-white text-black rounded-full border border-gray-300 hover:bg-gray-100 transition-all duration-300 flex items-center shadow-lg shadow-white/10 transform hover:scale-105">
-              <span className="font-medium text-sm sm:text-base">Book a 15-min discovery call</span>
+              <span className="font-medium text-base">Book a 15-min discovery call</span>
               <svg className="ml-2 w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
               </svg>
@@ -84,9 +81,9 @@ export default function Hero() {
           </div>
         </div>
         
-        {/* Founder image - centered on mobile, right-aligned on desktop */}
-        <div className="flex-shrink-0 w-64 sm:w-72 md:w-80 lg:w-96 mt-12 lg:mt-0">
-          <div className="relative w-full aspect-square rounded-2xl overflow-hidden border-2 border-gray-800 shadow-xl shadow-white/5 mx-auto lg:mx-0">
+        {/* Founder image - centered on its own row on mobile, right-aligned on desktop */}
+        <div className="flex-shrink-0 w-72 sm:w-80 md:w-80 lg:w-96 mt-12 lg:mt-0 mx-auto lg:mx-0">
+          <div className="relative w-full aspect-square rounded-2xl overflow-hidden border-2 border-gray-800 shadow-xl shadow-white/5">
             {/* Placeholder for founder image */}
             <div className="absolute inset-0 bg-gradient-to-br from-gray-800 to-gray-900 flex items-center justify-center">
               <div className="text-gray-500">
@@ -98,7 +95,7 @@ export default function Hero() {
             {/* When you have an actual image, replace the div above with: */}
             {/* <img src="/path/to/founder-image.jpg" alt="Founder Name" className="w-full h-full object-cover" /> */}
           </div>
-          <div className="mt-4 text-center lg:text-left">
+          <div className="mt-4 text-left">
             <h3 className="text-white font-medium text-lg">Aaryan Rajput</h3>
             <p className="text-gray-400 text-sm">CEO & Founder</p>
           </div>
