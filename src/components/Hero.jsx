@@ -45,10 +45,9 @@ export default function Hero() {
       {/* Text content */}
       <div className="flex flex-col justify-center items-center z-10 text-center px-4 ">
         <h1 className="text-4xl mt-8 mb-4 md:text-6xl font-serif tracking-wide text-white pr-12">
-          We build <span className="text-blue-400 inline-block w-32 md:w-44">
-            {currentText}
-            <span className="animate-pulse">|</span>
-          </span>
+          We build  <span className="relative pr-1 text-pink-50 border-solid bg-opacity-50 border-r-2 border-r-sky-200 animate-pulse">
+              {currentText}
+            </span>
         </h1>
         
         <h2 className="text-xl md:text-2xl font-light mt-3 text-gray-200 italic font-serif">

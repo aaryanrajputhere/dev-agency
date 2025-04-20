@@ -117,7 +117,7 @@ export default function OurProjects() {
       if (filteredProjects.length > 1) {
         nextProject();
       }
-    }, 8000); // Change slide every 8 seconds
+    }, 15000); // Change slide every 8 seconds
     
     return () => clearInterval(interval);
   }, [currentIndex, filteredProjects.length, isTransitioning]);
