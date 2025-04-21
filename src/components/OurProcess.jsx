@@ -5,8 +5,8 @@ function OurProcess() {
   return (
     <section className="relative w-full min-h-screen flex items-center justify-center overflow-hidden bg-black py-16 px-4 sm:px-6">
       {/* Content container with responsive layout */}
-      <div className="container mx-auto z-10 mt-15 flex flex-col items-center justify-center max-w-6xl lg:mt-10">
-        <div className="flex flex-col justify-center items-center text-center max-w-3xl w-full mb-10">
+      <div className="container mx-auto z-10 mt-15 flex flex-col items-start justify-center max-w-6xl lg:mt-10">
+        <div className="flex flex-col justify-start items-start text-left max-w-3xl w-full mb-10">
           <div className="px-4 py-3 mb-6 text-sm border border-solid border-white border-opacity-30 rounded-full text-gray-300 w-fit">
             Our Process
           </div>
@@ -119,12 +119,17 @@ function OurProcess() {
         
         {/* CTA Button - matching the style from Hero.jsx */}
         <div className="mt-12">
-          <button className="px-6 sm:px-8 py-3 sm:py-4 bg-white text-black rounded-full border border-gray-300 hover:bg-gray-100 transition-all duration-300 flex items-center shadow-lg shadow-white/10 transform hover:scale-105">
+          <a
+            href="https://cal.com/aaryanrajput/30min?overlayCalendar=true"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-6 sm:px-8 py-3 sm:py-4 bg-white text-black rounded-full border border-gray-300 hover:bg-gray-100 transition-all duration-300 flex items-center shadow-lg shadow-white/10 transform hover:scale-105"
+          >
             <span className="font-medium text-base">Book a 15-min discovery call</span>
             <svg className="ml-2 w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
             </svg>
-          </button>
+          </a>
         </div>
       </div>
       
