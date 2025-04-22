@@ -108,7 +108,7 @@ function Pricing() {
                 <div className="text-xl font-serif text-white">Monthly Retainer</div>
               </div>
               <div className="flex items-end gap-1 mb-4">
-                <div className="text-5xl font-bold text-white">$3,499</div>
+                <div className="text-5xl font-bold text-white">$499</div>
                 <div className="mb-1 text-base text-gray-400">/month</div>
               </div>
               <div className="text-sm text-gray-400">
@@ -180,7 +180,7 @@ function Pricing() {
                 <div className="text-xl font-serif text-white">Project Basis</div>
               </div>
               <div className="flex items-end gap-1 mb-4">
-                <div className="text-5xl font-bold text-white">$8,999</div>
+                <div className="text-5xl font-bold text-white">$499</div>
                 <div className="mb-1 text-base text-gray-400">one-time</div>
               </div>
               <div className="text-sm text-gray-400">
