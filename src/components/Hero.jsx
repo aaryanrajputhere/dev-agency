@@ -69,12 +69,13 @@ export default function Hero() {
   return (
     <section className="relative w-full min-h-screen flex items-center justify-center overflow-hidden bg-black py-16 px-4 sm:px-6">
       {/* Content container with responsive layout */}
-      <div 
-        className={`container mx-auto z-10 mt-15 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8 lg:gap-12 max-w-6xl lg:mt-10 transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+      <div className={`container mx-auto z-10 mt-35 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8 lg:gap-12 max-w-6xl lg:mt-10 transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
       >
         {/* Text content - consistently left-aligned on all screen sizes */}
         <div className="flex flex-col justify-center items-start text-left max-w-3xl w-full">
-          <h1 className={`mb-5 text-4xl sm:text-5xl md:text-5xl lg:text-6xl font-serif tracking-wide text-gray-300 transition-all duration-700 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`} style={{ transitionDelay: '300ms' }}>
+
+          <h1 className={`mb-5 text-4xl
+  sm:text-9xl md:text-5xl lg:text-6xl font-serif tracking-wide text-gray-300 transition-all duration-700 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`} style={{ transitionDelay: '300ms' }}>
             <div className="flex flex-wrap items-baseline">
               <span>We build</span>
               <span className="relative ml-3 inline-block">
@@ -116,7 +117,7 @@ export default function Hero() {
         </div>
         
         {/* Founder image - centered on its own row on mobile, right-aligned on desktop */}
-        <div className={`flex-shrink-0 w-72 sm:w-80 md:w-80 lg:w-96 mt-12 lg:mt-0 mx-auto lg:mx-0 transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8'}`} style={{ transitionDelay: '500ms' }}>
+        <div className={`flex-shrink-0 w-72 mt-50 sm:w-80 md:w-80 lg:w-96 mt-12 lg:mt-0 mx-auto lg:mx-0 transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8'}`} style={{ transitionDelay: '500ms' }}>
           <div className="relative w-full aspect-square rounded-2xl overflow-hidden border-2 border-gray-800 shadow-xl shadow-white/5 hover:shadow-white/10 transition-all duration-500 hover:scale-105">
             {/* Use the imported image variable instead of a direct path */}
             <img 
