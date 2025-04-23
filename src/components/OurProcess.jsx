@@ -119,18 +119,18 @@ function OurProcess() {
         
         {/* CTA Button - matching the style from Hero.jsx */}
         <div className="mt-12">
-          <a
-            href="https://cal.com/aaryanrajput/30min?overlayCalendar=true"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="px-6 sm:px-8 py-3 sm:py-4 bg-white text-black rounded-full border border-gray-300 hover:bg-gray-100 transition-all duration-300 flex items-center shadow-lg shadow-white/10 transform hover:scale-105"
-          >
-            <span className="font-medium text-base">Book a 15-min discovery call</span>
-            <svg className="ml-2 w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-            </svg>
-          </a>
-        </div>
+      <a
+        href="https://cal.com/aaryanrajput/30min?overlayCalendar=true"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-block scale-75 origin-left sm:scale-100 px-6 py-3 bg-white text-black rounded-full border border-gray-300 hover:bg-gray-100 transition-all duration-300 flex items-center shadow-lg shadow-white/10 transform hover:scale-105"
+      >
+        <span className="font-medium text-base">Book a 15-min discovery call</span>
+        <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+        </svg>
+      </a>
+    </div>
       </div>
       
       {/* Refined stars effect - matching Hero.jsx */}

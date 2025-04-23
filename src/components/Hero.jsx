@@ -7,6 +7,8 @@ export default function Hero() {
   const [currentText, setCurrentText] = useState("");
   const [isTyping, setIsTyping] = useState(true);
   const [isVisible, setIsVisible] = useState(false);
+
+  
   
   // Handle typing effect
   useEffect(() => {
@@ -74,8 +76,7 @@ export default function Hero() {
         {/* Text content - consistently left-aligned on all screen sizes */}
         <div className="flex flex-col justify-center items-start text-left max-w-3xl w-full">
 
-          <h1 className={`mb-5 text-4xl
-  sm:text-9xl md:text-5xl lg:text-6xl font-serif tracking-wide text-gray-300 transition-all duration-700 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`} style={{ transitionDelay: '300ms' }}>
+          <h1 className={`mb-5 text-4xl sm:text-9xl md:text-5xl lg:text-6xl font-serif tracking-wide text-gray-300 transition-all duration-700 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`} style={{ transitionDelay: '300ms' }}>
             <div className="flex flex-wrap items-baseline">
               <span>We build</span>
               <span className="relative ml-3 inline-block">
@@ -101,19 +102,19 @@ export default function Hero() {
             <span className="text-white font-medium"> fast</span>, <span className="text-gray-300 font-medium">reliable</span>, and <span className="text-gray-200 font-medium">hassle-free</span>.
           </p>
           
-          <div className={`mt-10 transition-all duration-700 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`} style={{ transitionDelay: '1100ms' }}>
+          <div className={`mt-6 transition-all duration-700 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`} style={{ transitionDelay: '1100ms' }}>
             <a
-              href="https://cal.com/aaryanrajput/30min?overlayCalendar=true"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-6 sm:px-8 py-3 sm:py-4 bg-white text-black rounded-full border border-gray-300 hover:bg-gray-100 transition-all duration-300 flex items-center shadow-lg shadow-white/10 transform hover:scale-105 hover:shadow-white/20 active:scale-95"
-            >
-              <span className="font-medium text-base">Book a 15-min discovery call</span>
-              <svg className="ml-2 w-4 h-4 sm:w-5 sm:h-5 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                href="https://cal.com/aaryanrajput/30min?overlayCalendar=true"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-4 sm:px-6 py-2 sm:py-3 bg-white text-black rounded-full border border-gray-300 hover:bg-gray-100 transition-all duration-300 flex items-center justify-center shadow-md shadow-white/10 transform hover:scale-105 hover:shadow-white/20 active:scale-95 text-sm sm:text-base w-full sm:w-auto max-w-xs mx-auto sm:mx-0"
+                >
+                <span className="font-medium">Book a 15-min discovery call</span>
+                <svg className="ml-1 sm:ml-2 w-3 h-3 sm:w-4 sm:h-4 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-              </svg>
+                </svg>
             </a>
-          </div>
+        </div>
         </div>
         
         {/* Founder image - centered on its own row on mobile, right-aligned on desktop */}
