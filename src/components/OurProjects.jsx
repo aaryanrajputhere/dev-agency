@@ -25,6 +25,7 @@ export default function OurProjects() {
       image: mathencodeImg,
       tags: ["React.js", "Tailwind CSS", "Vercel", "Landing Page"]
     },
+  
   ];
 
   const words = ["We Do", "We Design", "We Build"];
@@ -128,65 +129,43 @@ export default function OurProjects() {
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, [isTransitioning, filteredProjects.length]);
 
-  // CSS for smartphone frame
-  const smartphoneStyles = `
-    .smartphone {
-      position: relative;
-      width: 270px;
-      height: 480px;
-      margin: auto;
-      border: 16px black solid;
-      border-top-width: 60px;
-      border-bottom-width: 60px;
-      border-radius: 36px;
-      box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+  // CSS for custom scrollbar (removed smartphone styles)
+  const customStyles = `
+    /* Custom Scrollbar Styling */
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 8px;
     }
     
-    .smartphone:before {
-      content: '';
-      display: block;
-      width: 60px;
-      height: 5px;
-      position: absolute;
-      top: -30px;
-      left: 50%;
-      transform: translate(-50%, -50%);
+    .custom-scrollbar::-webkit-scrollbar-track {
+      background: #111;
+      border-radius: 4px;
+    }
+    
+    .custom-scrollbar::-webkit-scrollbar-thumb {
       background: #333;
-      border-radius: 10px;
+      border-radius: 4px;
     }
     
-    .smartphone:after {
-      content: '';
-      display: block;
-      width: 35px;
-      height: 35px;
-      position: absolute;
-      left: 50%;
-      bottom: -65px;
-      transform: translate(-50%, -50%);
-      background: #333;
-      border-radius: 50%;
+    .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+      background: #444;
     }
     
-    .smartphone .content {
-      width: 100%;
-      height: 100%;
-      background: white;
-      overflow: hidden;
+    /* For Firefox */
+    .custom-scrollbar {
+      scrollbar-width: thin;
+      scrollbar-color: #333 #111;
     }
     
-    .smartphone video {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      border: none;
+    /* For Edge and IE */
+    .custom-scrollbar {
+      -ms-overflow-style: none;
     }
   `;
   
   return (
     <section className="relative w-full min-h-screen flex items-center justify-center overflow-hidden bg-black py-24" id="what-we-do">
-      {/* Inject CSS for smartphone */}
-      <style>{smartphoneStyles}</style>
+      {/* Inject CSS for scrollbar */}
+      <style>{customStyles}</style>
       
       {/* Content container with responsive layout */}
       <div className="container mx-auto z-10 px-4 max-w-6xl">
@@ -209,83 +188,84 @@ export default function OurProjects() {
           </p>
         </div>
         
-        {/* Main project showcase */}
+        {/* Main project showcase with fixed height */}
         <div className="relative">
-          {/* Current project display */}
-          {filteredProjects.length > 0 && (
-            <div className={`transition-opacity duration-300 ${isTransitioning ? 'opacity-0' : 'opacity-100'}`}>
-              <div className="bg-transparent rounded-xl overflow-hidden shadow-2xl border border-gray-800 flex flex-col md:flex-row">
-                {/* Project image or phone video */}
-                <div className="md:w-1/2 relative overflow-hidden p-6 flex items-center justify-center">
-                  {filteredProjects[currentIndex].title === "BarqScoot" && filteredProjects[currentIndex].video ? (
-                    <div className="relative z-10">
-                      <div className="smartphone">
-                        <div className="content">
-                          <video
-                            src={filteredProjects[currentIndex].video}
-                            autoPlay
-                            muted
-                            loop
-                            playsInline
-                          />
-                        </div>
+          {/* Project container with fixed dimensions */}
+          <div className="h-[600px] md:h-[500px]">
+            {/* Current project display */}
+            {filteredProjects.length > 0 && (
+              <div className={`transition-opacity duration-300 h-full ${isTransitioning ? 'opacity-0' : 'opacity-100'}`}>
+                <div className="bg-transparent rounded-xl overflow-hidden shadow-2xl border border-gray-800 flex flex-col md:flex-row h-full">
+                  {/* Project image or video (removed phone frame) */}
+                  <div className="md:w-1/2 relative overflow-hidden p-6 flex items-center justify-center">
+                    {filteredProjects[currentIndex].title === "BarqScoot" && filteredProjects[currentIndex].video ? (
+                      <div className="relative z-10 w-full h-full flex items-center justify-center">
+                        {/* Direct video display without smartphone frame */}
+                        <video
+                          src={filteredProjects[currentIndex].video}
+                          autoPlay
+                          muted
+                          loop
+                          playsInline
+                          className=" h-auto max-w-full max-h-full rounded-[2vw] border border-gray-800 shadow-xl shadow-white/10"
+                        />
+                        
+                        {/* Decorative background glow */}
+                        <div className="absolute -inset-10 bg-white opacity-10 blur-3xl rounded-full -z-10"></div>
                       </div>
-                      
-                      {/* Decorative background glow */}
-                      <div className="absolute -inset-10 bg-white opacity-10 blur-3xl rounded-full -z-10"></div>
-                    </div>
-                  ) : (
-                    <div className="relative">
-                      <img 
-                        src={filteredProjects[currentIndex].image} 
-                        alt={filteredProjects[currentIndex].title} 
-                        className="w-full h-64 md:h-full object-cover rounded-lg border-2 border-gray-800 shadow-xl shadow-white/5"
-                        onError={(e) => {
-                          e.target.style.display = 'none';
-                          e.target.parentNode.classList.add('bg-gradient-to-br', 'from-gray-800', 'to-gray-900');
-                        }}
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-50"></div>
-                      
-                      {/* Glow effect similar to Hero */}
-                      <div className="absolute -inset-4 bg-white opacity-5 blur-3xl rounded-full -z-10"></div>
-                    </div>
-                  )}
-                  
-                  <div className="absolute top-4 left-4">
-                    <span className="text-xs px-3 py-1 bg-black bg-opacity-50 text-white rounded-full border border-gray-700">
-                      {filteredProjects[currentIndex].category === "web" ? "Web Development" : "App Development"}
-                    </span>
-                  </div>
-                </div>
-                
-                {/* Project info */}
-                <div className="md:w-1/2 p-8 md:p-12 flex flex-col justify-between">
-                  <div>
-                    <h3 className="text-3xl text-white font-bold mb-4 font-serif">{filteredProjects[currentIndex].title}</h3>
-                    <p className="text-gray-300 text-lg mb-6 leading-relaxed tracking-wide">{filteredProjects[currentIndex].description}</p>
+                    ) : (
+                      <div className="relative w-full h-full flex items-center justify-center">
+                        <img 
+                          src={filteredProjects[currentIndex].image} 
+                          alt={filteredProjects[currentIndex].title} 
+                          className="w-full h-64 md:h-80 object-cover rounded-lg border-2 border-gray-800 shadow-xl shadow-white/5"
+                          onError={(e) => {
+                            e.target.style.display = 'none';
+                            e.target.parentNode.classList.add('bg-gradient-to-br', 'from-gray-800', 'to-gray-900');
+                          }}
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-50"></div>
+                        
+                        {/* Glow effect similar to Hero */}
+                        <div className="absolute -inset-4 bg-white opacity-5 blur-3xl rounded-full -z-10"></div>
+                      </div>
+                    )}
                     
-                    <div className="flex flex-wrap gap-2 mt-6">
-                      {filteredProjects[currentIndex].tags.map((tag, index) => (
-                        <span key={index} className="text-sm px-3 py-1 bg-gray-900 text-gray-300 rounded-full border border-gray-800">
-                          {tag}
-                        </span>
-                      ))}
+                    <div className="absolute top-4 left-4">
+                      <span className="text-xs px-3 py-1 bg-black bg-opacity-50 text-white rounded-full border border-gray-700">
+                        {filteredProjects[currentIndex].category === "web" ? "Web Development" : "App Development"}
+                      </span>
                     </div>
                   </div>
                   
-                  <div className="mt-8">
-                    <button className="px-6 py-3 bg-white text-black rounded-full border border-gray-300 hover:bg-gray-100 transition-all duration-300 flex items-center shadow-lg shadow-white/10 transform hover:scale-105">
-                      <span className="font-medium text-base">View Project Details</span>
-                      <svg className="ml-2 w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-                      </svg>
-                    </button>
+                  {/* Project info with fixed height and custom scrollbar */}
+                  <div className="md:w-1/2 p-8 md:p-12 flex flex-col justify-between h-full overflow-y-auto custom-scrollbar">
+                    <div>
+                      <h3 className="text-3xl text-white font-bold mb-4 font-serif">{filteredProjects[currentIndex].title}</h3>
+                      <p className="text-gray-300 text-lg mb-6 leading-relaxed tracking-wide">{filteredProjects[currentIndex].description}</p>
+                      
+                      <div className="flex flex-wrap gap-2 mt-6">
+                        {filteredProjects[currentIndex].tags.map((tag, index) => (
+                          <span key={index} className="text-sm px-3 py-1 bg-gray-900 text-gray-300 rounded-full border border-gray-800">
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                    
+                    <div className="mt-8">
+                      <button className="px-6 py-3 bg-white text-black rounded-full border border-gray-300 hover:bg-gray-100 transition-all duration-300 flex items-center shadow-lg shadow-white/10 transform hover:scale-105">
+                        <span className="font-medium text-base">View Project Details</span>
+                        <svg className="ml-2 w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                        </svg>
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          )}
+            )}
+          </div>
           
           {/* Navigation arrows */}
           <div className="absolute top-1/2 -translate-y-1/2 left-0 -ml-5 md:-ml-6">

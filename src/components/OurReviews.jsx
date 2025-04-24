@@ -70,7 +70,7 @@ export default function OurReviews() {
     <section className="relative w-full py-24 overflow-hidden bg-black px-4 sm:px-6">
       {/* Content container */}
       <div className="container mx-auto z-10 relative max-w-6xl">
-        <div className="flex flex-col items-start text-left max-w-3xl mb-12">
+        <div className="flex flex-col items-start text-left max-w-4xl mb-12">
           <div className="px-4 py-2 mb-6 text-sm border border-solid border-white border-opacity-20 rounded-full text-gray-400 w-fit">
             Our Testimonials 
           </div>

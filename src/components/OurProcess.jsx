@@ -1,7 +1,9 @@
 "use client";
 import React from "react";
-
+import { useState } from "react";
 function OurProcess() {
+  const [isVisible, setIsVisible] = useState(false);
+  
   return (
     <section className="relative w-full min-h-screen flex items-center justify-center overflow-hidden bg-black py-16 px-4 sm:px-6">
       {/* Content container with responsive layout */}
@@ -118,19 +120,19 @@ function OurProcess() {
         </div>
         
         {/* CTA Button - matching the style from Hero.jsx */}
-        <div className="mt-12">
-      <a
-        href="https://cal.com/aaryanrajput/30min?overlayCalendar=true"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="inline-block scale-75 origin-left sm:scale-100 px-6 py-3 bg-white text-black rounded-full border border-gray-300 hover:bg-gray-100 transition-all duration-300 flex items-center shadow-lg shadow-white/10 transform hover:scale-105"
-      >
-        <span className="font-medium text-base">Book a 15-min discovery call</span>
-        <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-        </svg>
-      </a>
-    </div>
+        <div className="mt-6 transition-all duration-700 ease-out opacity-100 translate-y-0" style={{ transitionDelay: '1100ms' }}>
+        <a
+                href="https://cal.com/aaryanrajput/30min?overlayCalendar=true"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-4 sm:px-6 py-2 sm:py-3 bg-white text-black rounded-full border border-gray-300 hover:bg-gray-100 transition-all duration-300 flex items-center justify-center shadow-md shadow-white/10 transform hover:scale-105 hover:shadow-white/20 active:scale-95 text-sm sm:text-base w-full sm:w-auto max-w-xs mx-auto sm:mx-0"
+                >
+                <span className="font-medium">Book a 15-min discovery call</span>
+                <svg className="ml-1 sm:ml-2 w-3 h-3 sm:w-4 sm:h-4 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                </svg>
+            </a>
+        </div>
       </div>
       
       {/* Refined stars effect - matching Hero.jsx */}

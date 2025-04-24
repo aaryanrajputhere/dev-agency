@@ -108,7 +108,7 @@ function Pricing() {
                 <div className="text-xl font-serif text-white">Monthly Retainer</div>
               </div>
               <div className="flex items-end gap-1 mb-4">
-                <div className="text-5xl font-bold text-white">$499</div>
+                <div className="text-5xl font-bold text-white">$699+</div>
                 <div className="mb-1 text-base text-gray-400">/month</div>
               </div>
               <div className="text-sm text-gray-400">
@@ -155,12 +155,19 @@ function Pricing() {
               </div>
             </div>
             
-            <button className="px-6 py-3 bg-white text-black rounded-full border border-gray-300 hover:bg-gray-100 transition-all duration-300 flex items-center justify-center mt-auto shadow-lg shadow-white/10 transform hover:scale-105">
-              <span className="font-medium">Start Monthly Plan</span>
-              <svg className="ml-2 w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+           
+        <a
+                href="https://cal.com/aaryanrajput/30min?overlayCalendar=true"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-4 sm:px-6 py-2 sm:py-3 bg-white text-black rounded-full border border-gray-300 hover:bg-gray-100 transition-all duration-300 flex items-center justify-center shadow-md shadow-white/10 transform hover:scale-105 hover:shadow-white/20 active:scale-95 text-sm sm:text-base w-full sm:w-auto max-w-xs mx-auto sm:mx-0"
+                >
+                <span className="font-medium">Book a 15-min discovery call</span>
+                <svg className="ml-1 sm:ml-2 w-3 h-3 sm:w-4 sm:h-4 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-              </svg>
-            </button>
+                </svg>
+            </a>
+     
           </div>
           
           {/* Project Basis Plan */}
@@ -180,7 +187,7 @@ function Pricing() {
                 <div className="text-xl font-serif text-white">Project Basis</div>
               </div>
               <div className="flex items-end gap-1 mb-4">
-                <div className="text-5xl font-bold text-white">$499</div>
+                <div className="text-5xl font-bold text-white">$999+</div>
                 <div className="mb-1 text-base text-gray-400">one-time</div>
               </div>
               <div className="text-sm text-gray-400">
@@ -227,12 +234,18 @@ function Pricing() {
               </div>
             </div>
             
-            <button className="px-6 py-3 bg-white text-black rounded-full border border-gray-300 hover:bg-gray-100 transition-all duration-300 flex items-center justify-center mt-auto shadow-lg shadow-white/10 transform hover:scale-105">
-              <span className="font-medium">Start Your Project</span>
-              <svg className="ml-2 w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <a
+                href="https://cal.com/aaryanrajput/30min?overlayCalendar=true"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-4 sm:px-6 py-2 sm:py-3 bg-white text-black rounded-full border border-gray-300 hover:bg-gray-100 transition-all duration-300 flex items-center justify-center shadow-md shadow-white/10 transform hover:scale-105 hover:shadow-white/20 active:scale-95 text-sm sm:text-base w-full sm:w-auto max-w-xs mx-auto sm:mx-0"
+                >
+                <span className="font-medium">Book a 15-min discovery call</span>
+                <svg className="ml-1 sm:ml-2 w-3 h-3 sm:w-4 sm:h-4 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-              </svg>
-            </button>
+                </svg>
+            </a>
+     
           </div>
         </div>
         
