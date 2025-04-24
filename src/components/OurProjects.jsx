@@ -207,7 +207,7 @@ export default function OurProjects() {
                           muted
                           loop
                           playsInline
-                          className=" h-auto max-w-full max-h-full rounded-[2vw] border border-gray-800 shadow-xl shadow-white/10"
+                          className=" h-auto w-auto max-w-full max-h-full rounded-[2vw] border border-gray-800 shadow-xl shadow-white/10"
                         />
                         
                         {/* Decorative background glow */}
@@ -224,7 +224,7 @@ export default function OurProjects() {
                             e.target.parentNode.classList.add('bg-gradient-to-br', 'from-gray-800', 'to-gray-900');
                           }}
                         />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-50"></div>
+                     
                         
                         {/* Glow effect similar to Hero */}
                         <div className="absolute -inset-4 bg-white opacity-5 blur-3xl rounded-full -z-10"></div>
