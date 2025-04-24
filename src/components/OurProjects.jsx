@@ -110,7 +110,7 @@ export default function OurProjects() {
       if (filteredProjects.length > 1) {
         nextProject();
       }
-    }, 15000);
+    }, 150000);
     
     return () => clearInterval(interval);
   }, [currentIndex, filteredProjects.length, isTransitioning]);
