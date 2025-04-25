@@ -23,7 +23,7 @@ export default function OurReviews() {
       id: 3,
       content: "Aaryan was great to work with! We did a couple of projects together.",
       author: "Dhyeya Desai",
-      company: "Fiverr",
+      company: "Upwork",
       image: dhyeyaImg 
     },
   ];
