@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import BarqScootVideo from "../assets/vids/BarqScoot.mp4"; 
 import mathencodeImg from "../assets/img/mathencode.png";
-
+import fingenieImg from "../assets/img/fingenie.png"
 export default function OurProjects() {
   // Sample projects data
   const projects = [
@@ -25,6 +25,25 @@ export default function OurProjects() {
       image: mathencodeImg,
       tags: ["React.js", "Tailwind CSS", "Vercel", "Landing Page"]
     },
+    {
+      id: 3,
+      title: "FinGenie AI",
+      category: "web",
+      description: "FinGenie AI is a web app for recording and analyzing financial transactions, built with React.js, Node.js, TypeScript, PostgreSQL (NeonDB), and Prisma, offering seamless performance and AI-powered insights.",
+      image: fingenieImg,
+      tags: [
+        "React.js",
+        "TypeScript",
+        "Node.js",
+        "Express.js",
+        "Tailwind CSS",
+        "Prisma",
+        "PostgreSQL",
+        "NeonDB",
+        "Vercel",
+        "Gemini",
+      ]
+          },
   
   ];
 
