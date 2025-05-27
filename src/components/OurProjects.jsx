@@ -44,17 +44,17 @@ export default function OurProjects() {
         "Email Notifications",
       ],
     },
-        {
-      id: 3,
-      title: "Mathencode",
-      category: "web",
-      description:
-        "A modern and responsive landing page built for Chirag, a math educator, to showcase his teaching services, build credibility, and attract more students.",
-      image: mathencodeImg,
-      tags: ["React.js", "Tailwind CSS", "Vercel", "Landing Page"],
-    },
+    //     {
+    //   id: 3,
+    //   title: "Mathencode",
+    //   category: "web",
+    //   description:
+    //     "A modern and responsive landing page built for Chirag, a math educator, to showcase his teaching services, build credibility, and attract more students.",
+    //   image: mathencodeImg,
+    //   tags: ["React.js", "Tailwind CSS", "Vercel", "Landing Page"],
+    // },
     {
-      id: 4,
+      id: 3,
       title: "FinGenie AI",
       category: "web",
       description:
