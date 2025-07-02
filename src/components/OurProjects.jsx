@@ -8,10 +8,10 @@ export default function OurProjects() {
   const projects = [
     {
       id: 1,
-      title: "BarqScoot",
+      title: "Escoot-App",
       category: "app",
       description:
-        "Architected an end-to-end IoT e-scooter booking platform powering 200+ scooters and 1,000+ daily rides with 99.95% uptime. Developed cross-platform mobile apps using Flutter and a real-time web admin panel with Next.js. Integrated geofencing and dynamic pricing, boosting client revenue by 25%. Backend built with Golang and Python, secured with JWT, and deployed on AWS with Kubernetes. Enabled GPS tracking, QR-based unlocking, payment support (Apple Pay, Stripe, Mada), multilingual UX (English, Arabic), and real-time analytics.",
+        "Architected an end-to-end IoT e-scooter booking platform powering 200+ scooters and 1,000+ daily rides with 99.95% uptime. Developed cross-platform mobile apps using Flutter and a real-time web admin panel with Next.js. Integrated geofencing and dynamic pricing. Backend built with Golang and Python, secured with JWT, and deployed on AWS with Kubernetes. Enabled GPS tracking, QR-based unlocking, payment support (Apple Pay, Stripe, Mada), multilingual UX (English, Arabic), and real-time analytics.",
       image: "/api/placeholder/900/500",
       video: BarqScootVideo,
       tags: [
