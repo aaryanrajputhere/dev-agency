@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import aaryanImg from "../assets/img/aaryan.png"; // Import the image
+import aaryanImg from "../assets/img/aaryanart.jpg"; // Import the image
 
 export default function Hero() {
   const words = ["Websites", "Apps", "MVPs"];

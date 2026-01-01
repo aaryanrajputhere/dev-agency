@@ -307,6 +307,7 @@ export default function OurProjects() {
                             );
                           }}
                         />
+                        awgeduawhduiahdihiaaryanr this is crazy and this would be s=o awesome
 
                         {/* Glow effect similar to Hero */}
                         <div className="absolute -inset-4 bg-white opacity-5 blur-3xl rounded-full -z-10"></div>
