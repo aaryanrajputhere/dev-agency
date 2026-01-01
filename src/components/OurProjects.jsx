@@ -1,18 +1,37 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import BarqScootVideo from "../assets/vids/BarqScoot.mp4";
-import mathencodeImg from "../assets/img/mathencode.png";
-import fingenieImg from "../assets/img/fingenie.png";
+import maceinfoImg from "../assets/img/maceinfo.png";
 import easyservicesImg from "../assets/img/easyservices.png";
 export default function OurProjects() {
   // Sample projects data
   const projects = [
     {
       id: 1,
+      title: "MaceInfo",
+      category: "web",
+      description:
+        "Designed and built a construction materials management platform to streamline procurement workflows for large-scale construction projects. Developed an MVP featuring material estimation calculators, a quote builder with file uploads, and automated RFQ generation. Implemented an Award System to enable structured vendor selection, communication, and audit-ready record keeping. Integrated Google Sheets for real-time vendor quote tracking and Google Drive for centralized document storage. Focused on workflow automation, data consistency, and reducing manual procurement effort.",
+      image: maceinfoImg,
+      tags: [
+        "Node.js",
+        "JavaScript",
+        "Google Sheets API",
+        "Google Drive API",
+        "Workflow Automation",
+        "Procurement Systems",
+        "RFQ Automation",
+        "File Management",
+        "Data Handling",
+      ],
+    },
+
+    {
+      id: 2,
       title: "Escoot-App",
       category: "app",
       description:
         "Architected an end-to-end IoT e-scooter booking platform powering 200+ scooters and 1,000+ daily rides with 99.95% uptime. Developed cross-platform mobile apps using Flutter and a real-time web admin panel with Next.js. Integrated geofencing and dynamic pricing. Backend built with Golang and Python, secured with JWT, and deployed on AWS with Kubernetes. Enabled GPS tracking, QR-based unlocking, payment support (Apple Pay, Stripe, Mada), multilingual UX (English, Arabic), and real-time analytics.",
-      image: "/api/placeholder/900/500",
+
       video: BarqScootVideo,
       tags: [
         "Flutter",
@@ -28,12 +47,12 @@ export default function OurProjects() {
       ],
     },
     {
-      id: 2,
+      id: 3,
       title: "Easy Services",
       category: "web",
       description:
         "Easy Services is a fast, user-friendly business funding platform built with Next.js, Vercel, and Resend. It features an application form that allows users to apply for merchant cash advances between $5,000 and $500,000, with funds available in as little as 24 hours—no collateral required.",
-      image: easyservicesImg, // Replace with the actual image import/reference
+      image: easyservicesImg,
       tags: [
         "Next.js",
         "Tailwind CSS",
@@ -53,26 +72,26 @@ export default function OurProjects() {
     //   image: mathencodeImg,
     //   tags: ["React.js", "Tailwind CSS", "Vercel", "Landing Page"],
     // },
-    {
-      id: 3,
-      title: "FinGenie AI",
-      category: "web",
-      description:
-        "FinGenie AI is a web app for recording and analyzing financial transactions, built with React.js, Node.js, TypeScript, PostgreSQL (NeonDB), and Prisma, offering seamless performance and AI-powered insights.",
-      image: fingenieImg,
-      tags: [
-        "React.js",
-        "TypeScript",
-        "Node.js",
-        "Express.js",
-        "Tailwind CSS",
-        "Prisma",
-        "PostgreSQL",
-        "NeonDB",
-        "Vercel",
-        "Gemini",
-      ],
-    },
+    // {
+    //   id: 4,
+    //   title: "FinGenie AI",
+    //   category: "web",
+    //   description:
+    //     "FinGenie AI is a web app for recording and analyzing financial transactions, built with React.js, Node.js, TypeScript, PostgreSQL (NeonDB), and Prisma, offering seamless performance and AI-powered insights.",
+    //   image: fingenieImg,
+    //   tags: [
+    //     "React.js",
+    //     "TypeScript",
+    //     "Node.js",
+    //     "Express.js",
+    //     "Tailwind CSS",
+    //     "Prisma",
+    //     "PostgreSQL",
+    //     "NeonDB",
+    //     "Vercel",
+    //     "Gemini",
+    //   ],
+    // },
   ];
 
   const words = ["We Do", "We Design", "We Build"];
@@ -257,7 +276,7 @@ export default function OurProjects() {
                 <div className="bg-transparent rounded-xl overflow-hidden shadow-2xl border border-gray-800 flex flex-col md:flex-row h-full">
                   {/* Project image or video (removed phone frame) */}
                   <div className="md:w-1/2 relative overflow-hidden p-6 flex items-center justify-center">
-                    {filteredProjects[currentIndex].title === "BarqScoot" &&
+                    {filteredProjects[currentIndex].title === "Escoot-App" &&
                     filteredProjects[currentIndex].video ? (
                       <div className="relative z-10 w-full h-full flex items-center justify-center">
                         {/* Direct video display without smartphone frame */}
