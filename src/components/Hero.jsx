@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import aaryanImg from "../assets/img/aaryanart.jpg"; // Import the image
+import aaryanHoverImg from "../assets/img/aaryan.png"; // Import the hover image
 
 export default function Hero() {
   const words = ["Websites", "Apps", "MVPs"];
@@ -7,6 +8,7 @@ export default function Hero() {
   const [currentText, setCurrentText] = useState("");
   const [isTyping, setIsTyping] = useState(true);
   const [isVisible, setIsVisible] = useState(false);
+  const [isHovering, setIsHovering] = useState(false);
 
   // Handle typing effect
   useEffect(() => {
@@ -175,12 +177,16 @@ export default function Hero() {
           }`}
           style={{ transitionDelay: "500ms" }}
         >
-          <div className="relative w-full aspect-square rounded-2xl overflow-hidden border-2 border-white shadow-[0_0_20px_rgba(255,255,255,0.3)] hover:shadow-[0_0_30px_rgba(255,255,255,0.5)] transition-all duration-500 hover:scale-105">
+          <div 
+            className="relative w-full aspect-square rounded-2xl overflow-hidden border-2 border-white shadow-[0_0_20px_rgba(255,255,255,0.3)] hover:shadow-[0_0_30px_rgba(255,255,255,0.5)] transition-all duration-500 hover:scale-105"
+            onMouseEnter={() => setIsHovering(true)}
+            onMouseLeave={() => setIsHovering(false)}
+          >
             {/* Use the imported image variable instead of a direct path */}
             <img
-              src={aaryanImg}
+              src={isHovering ? aaryanHoverImg : aaryanImg}
               alt="Aaryan Rajput"
-              className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+              className="w-full h-full object-cover transition-all duration-700"
               onError={(e) => {
                 // Fallback to placeholder if image fails to load
                 e.target.style.display = "none";
