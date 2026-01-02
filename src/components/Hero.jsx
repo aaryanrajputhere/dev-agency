@@ -177,7 +177,7 @@ export default function Hero() {
           }`}
           style={{ transitionDelay: "500ms" }}
         >
-          <div 
+          <div
             className="relative w-full aspect-square rounded-2xl overflow-hidden border-2 border-white shadow-[0_0_20px_rgba(255,255,255,0.3)] hover:shadow-[0_0_30px_rgba(255,255,255,0.5)] transition-all duration-500 hover:scale-105"
             onMouseEnter={() => setIsHovering(true)}
             onMouseLeave={() => setIsHovering(false)}
@@ -214,8 +214,72 @@ export default function Hero() {
             }`}
             style={{ transitionDelay: "800ms" }}
           >
-            <h3 className="text-white font-medium text-lg">Aaryan Rajput</h3>
-            <p className="text-gray-400 text-sm">Founder & Developer</p>
+            <div className="flex flex-row">
+              <div>
+                <h3 className="text-white font-medium text-lg">
+                  Aaryan Rajput
+                </h3>
+                <p className="text-gray-400 text-sm">Founder & Developer</p>
+              </div>
+              <div className="flex items-center ml-8 gap-6 ">
+                <a
+                  href="https://www.fiverr.com/aaryanrajput314"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-white transition-colors duration-300"
+                  aria-label="Fiverr"
+                >
+                  <svg
+                    className="w-8 h-8"
+                    viewBox="0 0 192 192"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M0 0h192v192H0z" style={{ fill: "none" }} />
+                    <path
+                      d="M121.1 170h34.75V67.04H90.21v-7.72s0-9.01 9.01-9.01h21.88V22H99.22s-43.76 0-43.76 37.32v7.72h-19.3v28.31h19.3v74.64h34.75V95.36h30.89V170Z"
+                      style={{
+                        stroke: "currentColor",
+                        strokeLinejoin: "round",
+                        strokeWidth: "12px",
+                        fill: "none",
+                      }}
+                    />
+                  </svg>
+                </a>
+                <a
+                  href="https://twitter.com/AaryanRajput314"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-white transition-colors duration-300"
+                  aria-label="Twitter"
+                >
+                  <svg
+                    className="w-8 h-8"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                  </svg>
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/aaryan-rajput-988504236/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-white transition-colors duration-300"
+                  aria-label="LinkedIn"
+                >
+                  <svg
+                    className="w-8 h-8"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                  </svg>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
